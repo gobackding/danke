@@ -1,8 +1,3 @@
-import http from "../utils/http.js"
-
-export const home_banner_api = () => http("get", "/web-api/home-page/home-data?city_id=1");
-
-
-// 城市
-
-export const cityList = () => http("get", "/web-api/base-configure/city-list");
+import http from "utils/http.js"
+//正在热映
+export const home_banner_api = (city_id=1)=>http("get","web-api/home-page/banner?",{city_id:city_id})
